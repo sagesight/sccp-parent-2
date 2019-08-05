@@ -29,19 +29,19 @@
 	</properties>
 
 	<modules>
-    <module>sccp-demos</module>
-    <module>sccp-dht</module>
-    <module>sccp-kpabe</module>
-    <module>sccp-model</module>
-    <module>sccp-proto</module>
-    <module>sccp-rdf</module>
-    <module>sccp-rocks</module>
-    <module>sccp-rpclib</module>
-    <module>sccp-shared</module>
-    <module>sccp-tests</module>
-    <module>sccp-utils</module>
-    <module>sccp-vertx</module>
-    <module>sccp-webapp</module>
+		<module>sccp-demos</module>
+		<module>sccp-dht</module>
+		<module>sccp-kpabe</module>
+		<module>sccp-model</module>
+		<module>sccp-proto</module>
+		<module>sccp-rdf</module>
+		<module>sccp-rocks</module>
+		<module>sccp-rpclib</module>
+		<module>sccp-shared</module>
+		<module>sccp-tests</module>
+		<module>sccp-utils</module>
+		<module>sccp-vertx</module>
+		<module>sccp-webapp</module>
 	</modules>
 
 	<repositories>
@@ -71,6 +71,27 @@
 						<downloadJavadocs>false</downloadJavadocs>
 						<useProjectReferences>false</useProjectReferences>
 					</configuration>
+				</plugin>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.1.2</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<mainClass>${module.mainClass}</mainClass>
+								<addClasspath>true</addClasspath>
+								<classpathPrefix>dependency/</classpathPrefix>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+				
+				<plugin>
+				  <groupId>org.apache.maven</groupId>
+				  <artifactId>maven-archiver</artifactId>
+				  <version>3.4.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
