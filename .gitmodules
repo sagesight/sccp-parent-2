@@ -1,0 +1,39 @@
+[submodule "sccp-demos"]
+	path = sccp-demos
+	url = git@github.com:colabriq/sccp-demos.git
+[submodule "sccp-dht"]
+	path = sccp-dht
+	url = git@github.com:colabriq/sccp-dht.git
+[submodule "sccp-kpabe"]
+	path = sccp-kpabe
+	url = git@github.com:colabriq/sccp-kpabe.git
+[submodule "sccp-model"]
+	path = sccp-model
+	url = git@github.com:colabriq/sccp-model.git
+[submodule "sccp-proto"]
+	path = sccp-proto
+	url = git@github.com:colabriq/sccp-proto.git
+[submodule "sccp-rdf"]
+	path = sccp-rdf
+	url = git@github.com:colabriq/sccp-rdf.git
+[submodule "sccp-rocks"]
+	path = sccp-rocks
+	url = git@github.com:colabriq/sccp-rocks.git
+[submodule "sccp-rpclib"]
+	path = sccp-rpclib
+	url = git@github.com:colabriq/sccp-rpclib.git
+[submodule "sccp-shared"]
+	path = sccp-shared
+	url = git@github.com:colabriq/sccp-shared.git
+[submodule "sccp-tests"]
+	path = sccp-tests
+	url = git@github.com:colabriq/sccp-tests.git
+[submodule "sccp-utils"]
+	path = sccp-utils
+	url = git@github.com:colabriq/sccp-utils.git
+[submodule "sccp-vertx"]
+	path = sccp-vertx
+	url = git@github.com:colabriq/sccp-vertx.git
+[submodule "sccp-webapp"]
+	path = sccp-webapp
+	url = git@github.com:colabriq/sccp-webapp.git
