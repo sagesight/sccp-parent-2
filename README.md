@@ -36,5 +36,6 @@ A number of samples config files are located at `sccp-tests/src/test/resources/`
 ## How to develop
 
 See instructions in [CONTRIBUTING.md](CONTRIBUTING.md).
-Further details to be expanded!
+
+After running `mvn install` you should be able to import `sccp-parent` as Maven parent project, with its children, in to Eclipse or IntelliJ.
 
