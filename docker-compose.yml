@@ -1,0 +1,26 @@
+version: '3'
+services:
+  sccp-dht:
+    container_name: sccp-dht
+    image: sccp-dht
+    ports:
+      - "8091:8091"
+    environment:
+      - "PORT=8091"
+      - "DB_PATH=/db"
+  
+  sccp-rdf:
+    container_name: sccp-rdf
+    image: sccp-rdf
+    ports:
+      - "8081:8081"
+    environment:
+      - "PORT=8081"
+      - "DHT_URI=http://sccp-dht:8091"
+      - "DB_PATH=/db"
+      - "ID_DID=id1"
+      - "ID_PRIVATE_KEY=MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCA9JAc3KuQyfuZibnJDD344EubMS4eF5iRpqzxZJ3gm7w=="
+      - "ID_PUBLIC_KEY=MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUOScZ+n4FCUHRY4uma0ex1fsiBpxyL7PnNo5yKv2Sd93Rb8Gqdfcn/MLOf3DApBDPrjlHpiNUqF2z4wI8q/oIQ=="
+      - "KPABE_PUBLIC_KEY=AAAAFqpvysBBBSscsTuDSN3W0iewt4ltcGsAAAGooQFZsgEEtLIBAA9+w9w//mZS2+6wHyuKSd6chKul+bEm8cpMbeJgy/5hGhpMR7VD1T1tX5MeioujTOY1m2O+KQdjwt8rh6wfXAsNcmWxJWvHWkqZQTBWPsUA61Bofuwa6/WUG3gyI7psCxtV25/FCIF+tBrec5JBVFaxfbBMsWTVRs+Hc8MC+915CvEkeUByUQ+GEc9vpWayJyf51TmpjBIgoFuspjc3RoAJ/AaEj5o8V97u+bG68jkw5zbQTlycmzcCzTaihV5PDBFo6QqZFSxmZXx3AfjSbinJCxqDqJBvUZ5ySp/8YFOaIGaqD88+FyLBBUXUZ9BNhmG5PUNbpcHQy+aaeIl2APKhAmcxoSSyoSECBvfiQNAe9IUL4W05vtelSFvll/xee//9A9wb7TYvbymhAmcyoUSzoUECDeXuGxKTAIJ0p+CCR7upwZbFInffpJoUGSBp7kkT3RILMCMgSDLqhmbi7AcTwM+MmARE65qTWml8wEfRNLM2DqEBa6ElHQAAACAT2XWTqzXsSaKepU5x/OH3ANwRRBcIAsq1yFM9frkkZg=="
+      - "KPABE_SECRET_KEY=AAAAFqpvype5RLXuqhJOtIklSFdv0+Rtc2sAAAAooQF5oSOxACAkA9SQD04Fks2IxwQerWS9sxY4QByNaax0jufbxm1VmQ=="
+
